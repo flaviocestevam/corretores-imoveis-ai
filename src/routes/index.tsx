@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
-import { useState, type FormEvent } from "react";
-import { submitLead } from "@/lib/leads.functions";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
