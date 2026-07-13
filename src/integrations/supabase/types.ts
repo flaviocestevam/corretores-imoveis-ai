@@ -14,7 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      leads_venda: {
+        Row: {
+          created_at: string
+          id: string
+          imoveis_por_mes: string | null
+          nome: string
+          tipo_imovel: string | null
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          imoveis_por_mes?: string | null
+          nome: string
+          tipo_imovel?: string | null
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          imoveis_por_mes?: string | null
+          nome?: string
+          tipo_imovel?: string | null
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
