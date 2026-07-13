@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
-import { useState, type FormEvent } from "react";
-import { submitLead } from "@/lib/leads.functions";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -437,33 +435,6 @@ function FAQ() {
 }
 
 function CtaFinal() {
-  const submit = useServerFn(submitLead);
-  const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
-  const [erro, setErro] = useState<string | null>(null);
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const fd = new FormData(form);
-    setStatus("loading");
-    setErro(null);
-    try {
-      await submit({
-        data: {
-          nome: String(fd.get("nome") ?? ""),
-          whatsapp: String(fd.get("whatsapp") ?? ""),
-          tipo_imovel: String(fd.get("tipo_imovel") ?? ""),
-          imoveis_por_mes: String(fd.get("imoveis_por_mes") ?? ""),
-        },
-      });
-      form.reset();
-      setStatus("ok");
-    } catch (err) {
-      setErro(err instanceof Error ? err.message : "Erro ao enviar");
-      setStatus("error");
-    }
-  }
-
   return (
     <section id="lead" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute inset-0">
@@ -474,91 +445,21 @@ function CtaFinal() {
           O feed do seu concorrente <em className="text-gold not-italic">não espera</em>.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-          Preencha em 20 segundos. Nosso time entra em contato pelo WhatsApp com o próximo passo — sem robô, sem enrolação.
+          Escolha um plano e comece a postar vídeos de outro nível ainda esta semana.
         </p>
-
-        <form onSubmit={onSubmit} className="mx-auto mt-10 grid gap-3 rounded-3xl border border-gold/30 bg-card/70 p-6 text-left backdrop-blur sm:grid-cols-2">
-          <Field label="Nome" name="nome" required placeholder="Como podemos te chamar" className="sm:col-span-2" />
-          <Field label="WhatsApp" name="whatsapp" required placeholder="(11) 90000-0000" />
-          <SelectField label="Tipo de imóvel" name="tipo_imovel" options={["Apartamento alto padrão", "Cobertura", "Casa de condomínio", "Lançamento / construtora", "Comercial de alto padrão"]} />
-          <SelectField label="Imóveis por mês" name="imoveis_por_mes" options={["Até 10", "10 a 30", "30 a 80", "80 a 150", "Mais de 150"]} className="sm:col-span-2" />
-
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-luxe)] transition-transform hover:-translate-y-0.5 disabled:opacity-60 sm:col-span-2"
+        <div className="mt-10 flex justify-center">
+          <a
+            href="#planos"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-luxe)] transition-transform hover:-translate-y-0.5"
           >
-            {status === "loading" ? "Enviando..." : "Quero conversar com o studio"}
-          </button>
-
-          {status === "ok" && (
-            <p className="text-center text-sm text-gold-soft sm:col-span-2">
-              Recebido. Nosso time chama no WhatsApp em breve.
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-center text-sm text-destructive sm:col-span-2">{erro}</p>
-          )}
-        </form>
+            Ver planos e começar
+          </a>
+        </div>
       </div>
     </section>
   );
 }
 
-function Field({
-  label,
-  name,
-  required,
-  placeholder,
-  className = "",
-}: {
-  label: string;
-  name: string;
-  required?: boolean;
-  placeholder?: string;
-  className?: string;
-}) {
-  return (
-    <label className={"block " + className}>
-      <span className="text-[11px] uppercase tracking-widest text-muted-foreground">{label}</span>
-      <input
-        name={name}
-        required={required}
-        placeholder={placeholder}
-        maxLength={120}
-        className="mt-1.5 w-full rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-gold focus:ring-1 focus:ring-gold"
-      />
-    </label>
-  );
-}
-
-function SelectField({
-  label,
-  name,
-  options,
-  className = "",
-}: {
-  label: string;
-  name: string;
-  options: string[];
-  className?: string;
-}) {
-  return (
-    <label className={"block " + className}>
-      <span className="text-[11px] uppercase tracking-widest text-muted-foreground">{label}</span>
-      <select
-        name={name}
-        defaultValue=""
-        className="mt-1.5 w-full rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-gold focus:ring-1 focus:ring-gold"
-      >
-        <option value="" disabled>Selecione</option>
-        {options.map((o) => (
-          <option key={o} value={o}>{o}</option>
-        ))}
-      </select>
-    </label>
-  );
-}
 
 function Footer() {
   return (
