@@ -207,7 +207,7 @@ function HomePage() {
             <div className="stat-grid">
               <div><div className="stat-num grad-text">403%</div><div className="stat-label">mais chances de um imóvel ser consultado quando é apresentado em vídeo, contra apenas fotos.</div></div>
               <div><div className="stat-num grad-text">48h</div><div className="stat-label">é o prazo mais rápido de entrega — sem esperar semanas de uma produtora tradicional.</div></div>
-              <div><div className="stat-num grad-text">23</div><div className="stat-label">personagens de IA prontos, sem precisar treinar ninguém ou contratar um influenciador real.</div></div>
+              <div><div className="stat-num grad-text">22</div><div className="stat-label">personagens de IA prontos, sem precisar treinar ninguém ou contratar um influenciador real.</div></div>
             </div>
             <div className="stat-source">Fonte: pesquisa de mercado citada por EncontraMoema sobre o comportamento do comprador de imóveis de alto padrão, 2026.</div>
           </div>
