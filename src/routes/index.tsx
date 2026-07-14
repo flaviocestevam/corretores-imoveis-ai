@@ -275,7 +275,7 @@ function HomePage() {
                 {c.video ? (
                   <video className="cast-video" src={c.video} autoPlay muted loop playsInline />
                 ) : c.photo ? (
-                  <img className="cast-video" src={c.photo} alt={c.name} loading="lazy" />
+                  <img className="cast-photo" src={c.photo} alt={c.name} loading="lazy" />
                 ) : null}
                 <div className="cast-scrim" />
                 <div className="cast-inner">
