@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import alineFoto from "@/assets/personagens/aline-tecnica.png.asset.json";
+import biancaFoto from "@/assets/personagens/bianca-close.png.asset.json";
+import augustoFoto from "@/assets/personagens/augusto-misterio.jpeg.asset.json";
+import brunoFoto from "@/assets/personagens/bruno-resenha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -10,11 +14,13 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-const personagens = [
+const personagens: { nome: string; tag: string; bio: string; foto?: string }[] = [
   { nome: "Sérgio Churrasco", tag: "The Closer", bio: "O amigo que fecha o negócio no domingo à tarde." },
   { nome: "Clara Romance", tag: "The Storyteller", bio: "Vende o sonho da casa para começar a história." },
-  { nome: "Aline Técnica", tag: "The Advisor", bio: "Planta, IPTU e ROI sem enrolação." },
-  { nome: "Bianca Close", tag: "The Negotiator", bio: "Fecha antes da concorrência responder o direct." },
+  { nome: "Aline Técnica", tag: "The Advisor", bio: "Planta, IPTU e ROI sem enrolação.", foto: alineFoto.url },
+  { nome: "Bianca Close", tag: "The Negotiator", bio: "Fecha antes da concorrência responder o direct.", foto: biancaFoto.url },
+  { nome: "Augusto Mistério", tag: "The Enigma", bio: "Silêncio elegante, presença que fecha antes da palavra.", foto: augustoFoto.url },
+  { nome: "Bruno Resenha", tag: "The Host", bio: "Tour descontraído com vista pro mar e papo reto.", foto: brunoFoto.url },
   { nome: "Eduardo Sussurro", tag: "The Curator", bio: "Tour íntimo, tom baixo, alto padrão." },
   { nome: "Yasmin Valença", tag: "The Ambassador", bio: "Frontal beach, brisa e sofisticação." },
   { nome: "Patrícia Luxo", tag: "The Executive", bio: "Coberturas, jóias e closets do tamanho de um apê." },
