@@ -251,10 +251,14 @@ function HomePage() {
             <div className="eyebrow">O elenco</div>
             <h2>22 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
           </div>
-          <div className="cast-scroll reveal">
+          <div className="cast-grid reveal">
             {CAST.map((c) => (
               <div className="cast-card" key={c.n}>
-                {c.video && <video className="cast-video" src={c.video} autoPlay muted loop playsInline />}
+                {c.video ? (
+                  <video className="cast-video" src={c.video} autoPlay muted loop playsInline />
+                ) : c.photo ? (
+                  <img className="cast-video" src={c.photo} alt={c.name} loading="lazy" />
+                ) : null}
                 <div className="cast-scrim" />
                 <div className="cast-inner">
                   <div className="cast-top-row"><div className="cast-index2">Nº {c.n}</div><div className="cast-role2">{c.role}</div></div>
