@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Corretor IA Studio — Influenciadores de IA que viralizam seus imóveis" },
-      { name: "description", content: "23 corretores de IA prontos para transformar suas fotos em Reels e TikToks virais. Sem câmera, sem estúdio, entrega em dias." },
+      { name: "description", content: "22 corretores de IA prontos para transformar suas fotos em Reels e TikToks virais. Sem câmera, sem estúdio, entrega em dias." },
       { property: "og:title", content: "Corretor IA Studio — Influenciadores de IA que viralizam seus imóveis" },
-      { property: "og:description", content: "Reels virais para imóveis de alto padrão. 23 personagens de IA prontos. Entrega em 48h." },
+      { property: "og:description", content: "Reels virais para imóveis de alto padrão. 22 personagens de IA prontos. Entrega em 48h." },
     ],
   }),
   component: HomePage,
@@ -49,7 +49,7 @@ const CAST = [
 const MARQUEE = ["SC Sérgio Churrasco", "CR Clara Romance", "AT Aline Técnica", "BC Bianca Close", "ES Eduardo Sussurro", "YV Yasmin Valença", "PL Patrícia Luxo", "NB Nádia Blindada"];
 
 const FAQ = [
-  { q: "Os personagens são reais?", a: "Não. Os 23 corretores são personagens fictícios gerados por IA, com identidade visual e personalidade próprias. As fotos dos imóveis são sempre reais — as suas." },
+  { q: "Os personagens são reais?", a: "Não. Os 22 corretores são personagens fictícios gerados por IA, com identidade visual e personalidade próprias. As fotos dos imóveis são sempre reais — as suas." },
   { q: "Preciso aparecer no vídeo?", a: "Não. Essa é a proposta. Você envia as fotos, o estúdio entrega o vídeo pronto — sem câmera, sem estúdio, sem tempo perdido." },
   { q: "É só vídeo com personagem, ou dá pra fazer tour sem pessoa?", a: "As duas coisas. Além dos personagens virais, produzimos tour cinematográfico a partir da mesma foto, sem ninguém aparecendo — indicado quando o imóvel deve ser o único protagonista." },
   { q: "Quanto tempo demora a entrega?", a: "De 48 horas a 5 dias úteis, dependendo do plano. O plano Black tem prioridade máxima." },
@@ -128,7 +128,7 @@ function HomePage() {
           <div className="hero-grid">
             <div>
               <div className="badge-row">
-                <div className="pill"><span className="pulse" /> 23 influenciadores de IA prontos pra vender</div>
+                <div className="pill"><span className="pulse" /> 22 influenciadores de IA prontos pra vender</div>
               </div>
               <h1>Seus imóveis não precisam de <span className="grad-text">fotógrafo.</span><br />Precisam de <span className="grad-text">influenciador.</span></h1>
               <p className="hero-sub">A gente transforma as fotos que você já tem em Reels e TikToks virais estrelados por corretores de IA — ou em tours cinematográficos sem ninguém aparecendo. Sem câmera, sem estúdio, por uma fração do custo de uma produção tradicional.</p>
@@ -138,7 +138,7 @@ function HomePage() {
               </div>
               <div className="trust-row">
                 <div className="avatars"><div>SC</div><div>CR</div><div>YV</div><div>PL</div></div>
-                <div className="trust-text"><b>23 personagens</b> de IA já prontos para o seu imóvel</div>
+                <div className="trust-text"><b>22 personagens</b> de IA já prontos para o seu imóvel</div>
               </div>
             </div>
             <div className="phone-stage">
@@ -182,7 +182,7 @@ function HomePage() {
             <div className="pillar">
               <div className="icon">🎭</div>
               <h3>Influenciadores de IA</h3>
-              <p>23 personagens com personalidade, sotaque e bordão próprios, inseridos de forma realista nas fotos reais do imóvel. O público assiste até o fim porque quer saber o que o personagem vai dizer — não porque precisa saber o preço do m².</p>
+              <p>22 personagens com personalidade, sotaque e bordão próprios, inseridos de forma realista nas fotos reais do imóvel. O público assiste até o fim porque quer saber o que o personagem vai dizer — não porque precisa saber o preço do m².</p>
               <div className="no">Não é avatar genérico lendo um texto decorado.</div>
             </div>
             <div className="pillar">
@@ -232,7 +232,7 @@ function HomePage() {
             <div className="cost-card new">
               <h4>Corretor IA Studio</h4>
               <div className="cost-row"><span>Captação</span><span>Fotos que você já tem</span></div>
-              <div className="cost-row"><span>Elenco</span><span>23 personagens prontos, sem gravação</span></div>
+              <div className="cost-row"><span>Elenco</span><span>22 personagens prontos, sem gravação</span></div>
               <div className="cost-row"><span>Edição</span><span>Incluída no plano, entregue junto</span></div>
               <div className="cost-row"><span>Escala</span><span>20 a 150 vídeos/mês no mesmo plano fixo</span></div>
               <div className="cost-row"><span>Prazo</span><span>48h a 5 dias úteis</span></div>
@@ -245,7 +245,7 @@ function HomePage() {
         <div className="wrap">
           <div className="section-head reveal">
             <div className="eyebrow">O elenco</div>
-            <h2>23 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
+            <h2>22 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
           </div>
           <div className="cast-scroll reveal">
             {CAST.map((c) => (
@@ -289,7 +289,7 @@ function HomePage() {
               <div className="plan-price">R$ 1.497<span>/mês</span></div>
               <div className="plan-desc">20 vídeos por mês</div>
               <ul>
-                <li>Escolha entre 23 corretores de IA</li>
+                <li>Escolha entre 22 corretores de IA</li>
                 <li>Formato vertical 9:16 nativo</li>
                 <li>Roteiro personalizado por imóvel</li>
                 <li>Entrega em até 5 dias úteis</li>
