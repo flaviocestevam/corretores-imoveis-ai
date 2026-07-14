@@ -22,14 +22,28 @@ export const Route = createFileRoute("/")({
 });
 
 const CAST = [
-  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v2.url },
-  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v3.url },
-  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v4.url },
-  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v5.url },
-  { n: "05", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
-  { n: "06", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
-  { n: "07", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
-  { n: "08", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct." },
+  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v1.url },
+  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v2.url },
+  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v3.url },
+  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v4.url },
+  { n: "05", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct.", video: v5.url },
+  { n: "06", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
+  { n: "07", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
+  { n: "08", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
+  { n: "09", role: "The Enigma", name: "Augusto Mistério", bio: "Suspense e desejo em cada corte." },
+  { n: "10", role: "The Host", name: "Bruno Resenha", bio: "Recebe o público como quem abre a própria casa." },
+  { n: "11", role: "The Visionary", name: "Caio Evolução", bio: "Mostra o imóvel como o próximo passo da sua vida." },
+  { n: "12", role: "The Voice", name: "Camila Áudio", bio: "Locução envolvente que segura até o último segundo." },
+  { n: "13", role: "The Architect", name: "Henrique Espaço", bio: "Lê planta, volume e luz como ninguém." },
+  { n: "14", role: "The Champion", name: "João Vitória", bio: "Energia de fechamento e vibração de conquista." },
+  { n: "15", role: "The Spark", name: "Luna Energia", bio: "Ritmo alto, corte rápido, alcance viral." },
+  { n: "16", role: "The Straight-Shooter", name: "Marcos Verdade", bio: "Sem filtro, sem enrolação — só o que importa." },
+  { n: "17", role: "The Trendsetter", name: "Maya Urbano", bio: "Linguagem de rua, estética de capa de revista." },
+  { n: "18", role: "The Dramatist", name: "Otávio Novela", bio: "Cada ambiente vira cena de novela das nove." },
+  { n: "19", role: "The Broker", name: "Rafael Parcela", bio: "Traduz condição de pagamento em decisão fácil." },
+  { n: "20", role: "The Insider", name: "Renata Fofoca", bio: "Conta os bastidores que ninguém mais conta." },
+  { n: "21", role: "The Joy", name: "Solange Alegria", bio: "Bom humor que aproxima e engaja o feed." },
+  { n: "22", role: "The Editor", name: "Valentina Cortez", bio: "Curadoria afiada, estética de editorial de moda." },
 ];
 
 const MARQUEE = ["SC Sérgio Churrasco", "CR Clara Romance", "AT Aline Técnica", "BC Bianca Close", "ES Eduardo Sussurro", "YV Yasmin Valença", "PL Patrícia Luxo", "NB Nádia Blindada"];
