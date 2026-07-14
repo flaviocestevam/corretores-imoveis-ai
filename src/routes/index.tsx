@@ -275,7 +275,7 @@ function HomePage() {
                 {c.video ? (
                   <video className="cast-video" src={c.video} autoPlay muted loop playsInline />
                 ) : c.photo ? (
-                  <img className="cast-video" src={c.photo} alt={c.name} loading="lazy" />
+                  <img className="cast-photo" src={c.photo} alt={c.name} loading="lazy" />
                 ) : null}
                 <div className="cast-scrim" />
                 <div className="cast-inner">
@@ -582,8 +582,10 @@ nav.links a:hover{color:var(--ink);}
 
 .cast-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px;}
 @media (max-width:640px){.cast-grid{grid-template-columns:repeat(2,1fr); gap:12px;}}
-.cast-card{border-radius:22px; overflow:hidden; position:relative; height:340px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
+.cast-card{border-radius:22px; overflow:hidden; position:relative; height:460px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
 .cast-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
+.cast-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center bottom; z-index:0;}
+
 .cast-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.65) 100%);}
 .cast-card:hover{transform:translateY(-8px);}
 .cast-card:nth-child(2){background:linear-gradient(160deg,#3a2a52,#7b4fa8,var(--gold-2));}
