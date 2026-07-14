@@ -108,7 +108,7 @@ function Eyebrow({ children, align = "left" }: { children: React.ReactNode; alig
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-background/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-black/[0.06] bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 lg:px-20">
         <a href="#topo" className="font-serif text-lg tracking-tight">
           Corretor <span className="italic text-gold">IA</span> Studio
@@ -173,7 +173,7 @@ function Hero() {
                 →
               </span>
             </a>
-            <dl className="flex w-full gap-12 border-t border-white/10 pt-6">
+            <dl className="flex w-full gap-12 border-t border-black/10 pt-6">
               <div>
                 <dt className="font-serif text-2xl font-light">R$ 2M+</dt>
                 <dd className="mt-1 text-[9px] uppercase tracking-[0.3em] text-foreground/40">Ticket Médio</dd>
@@ -201,10 +201,10 @@ function Hero() {
 
 function Problema() {
   return (
-    <section className="border-y border-white/5 bg-[oklch(0.11_0.012_55)] px-6 py-32 lg:px-20">
+    <section className="border-y border-black/[0.06] bg-[oklch(0.97_0.004_85)] px-6 py-32 lg:px-20">
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-20 md:grid-cols-2 md:items-center">
-          <div className="reveal relative aspect-[4/5] overflow-hidden border border-white/5 bg-[oklch(0.16_0.02_55)]">
+          <div className="reveal relative aspect-[4/5] overflow-hidden border border-black/[0.06] bg-[oklch(0.985_0.003_85)]">
             <div className="absolute inset-0 bg-gradient-to-tr from-bordeaux/25 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-center p-12">
               <p className="text-center font-serif text-3xl italic leading-tight opacity-50 sm:text-4xl">
@@ -258,7 +258,7 @@ function Solucao() {
           {personagens.map((p, i) => (
             <article
               key={p.nome}
-              className="reveal group relative aspect-[9/16] overflow-hidden border border-white/5 bg-[oklch(0.19_0.02_55)] transition-all duration-700 hover:-translate-y-2 hover:border-gold/30"
+              className="reveal group relative aspect-[9/16] overflow-hidden border border-black/[0.06] bg-[oklch(0.96_0.005_85)] transition-all duration-700 hover:-translate-y-2 hover:border-gold/30"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <div className="absolute inset-0 flex items-center justify-center">
@@ -294,7 +294,7 @@ function ComoFunciona() {
     { t: "Você recebe e posta", d: "Entregue em MP4 no seu drive. Poste em qualquer plataforma vertical." },
   ];
   return (
-    <section id="como" className="border-y border-white/5 bg-[oklch(0.11_0.012_55)] px-6 py-32 lg:px-20">
+    <section id="como" className="border-y border-black/[0.06] bg-[oklch(0.97_0.004_85)] px-6 py-32 lg:px-20">
       <div className="mx-auto max-w-[1440px]">
         <div className="reveal">
           <Eyebrow>The Method</Eyebrow>
@@ -303,7 +303,7 @@ function ComoFunciona() {
           </h2>
         </div>
 
-        <ol className="mt-20 grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-20 grid gap-px bg-black/[0.06] sm:grid-cols-2 lg:grid-cols-4">
           {passos.map((p, i) => (
             <li
               key={p.t}
@@ -352,7 +352,7 @@ function Provas() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-px bg-black/[0.06] sm:grid-cols-2 lg:grid-cols-4">
           {metricas.map((m, i) => (
             <div
               key={m.l}
@@ -372,7 +372,7 @@ function Provas() {
           {depos.map((d, i) => (
             <blockquote
               key={i}
-              className="reveal relative border border-white/5 bg-[oklch(0.16_0.02_55)] p-10"
+              className="reveal relative border border-black/[0.06] bg-[oklch(0.985_0.003_85)] p-10"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <span className="absolute left-6 top-4 font-serif text-6xl leading-none text-gold/30">"</span>
@@ -390,7 +390,7 @@ function Provas() {
 
 function Planos() {
   return (
-    <section id="planos" className="border-y border-white/5 bg-[oklch(0.11_0.012_55)] px-6 py-32 lg:px-20">
+    <section id="planos" className="border-y border-black/[0.06] bg-[oklch(0.97_0.004_85)] px-6 py-32 lg:px-20">
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="reveal max-w-2xl">
@@ -404,7 +404,7 @@ function Planos() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-white/5 lg:grid-cols-3">
+        <div className="grid gap-px bg-black/[0.06] lg:grid-cols-3">
           {planos.map((p, i) => (
             <article
               key={p.nome}
@@ -433,7 +433,7 @@ function Planos() {
 
               <ul className="mt-10 flex-1 space-y-4 text-sm font-light text-foreground/70">
                 {p.bullets.map((b) => (
-                  <li key={b} className="flex gap-4 border-t border-white/5 pt-4">
+                  <li key={b} className="flex gap-4 border-t border-black/[0.06] pt-4">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                     <span>{b}</span>
                   </li>
@@ -500,11 +500,11 @@ function ParaQuem() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-px bg-white/5 md:grid-cols-3">
+        <div className="mt-16 grid gap-px bg-black/[0.06] md:grid-cols-3">
           {cols.map((c, i) => (
             <div
               key={c.t}
-              className="reveal group relative bg-background p-10 transition-colors hover:bg-[oklch(0.16_0.02_55)]"
+              className="reveal group relative bg-background p-10 transition-colors hover:bg-[oklch(0.985_0.003_85)]"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <span className="text-[9px] uppercase tracking-[0.4em] text-gold">{c.tag}</span>
@@ -527,7 +527,7 @@ function ParaQuem() {
 
 function FAQ() {
   return (
-    <section id="faq" className="border-y border-white/5 bg-[oklch(0.11_0.012_55)] px-6 py-32 lg:px-20">
+    <section id="faq" className="border-y border-black/[0.06] bg-[oklch(0.97_0.004_85)] px-6 py-32 lg:px-20">
       <div className="mx-auto max-w-5xl">
         <div className="reveal grid gap-16 md:grid-cols-[1fr_2fr] md:items-start">
           <div className="md:sticky md:top-32">
@@ -537,7 +537,7 @@ function FAQ() {
             </h2>
           </div>
 
-          <div className="divide-y divide-white/5 border-y border-white/5">
+          <div className="divide-y divide-black/[0.06] border-y border-black/[0.06]">
             {faq.map((f, i) => (
               <details key={i} className="group py-6">
                 <summary className="flex cursor-pointer list-none items-start gap-6">
@@ -597,7 +597,7 @@ function CtaFinal() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 px-6 py-14 lg:px-20">
+    <footer className="border-t border-black/[0.06] px-6 py-14 lg:px-20">
       <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 md:flex-row md:items-center">
         <div>
           <p className="font-serif text-xl">
