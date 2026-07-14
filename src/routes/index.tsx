@@ -8,6 +8,10 @@ import v2 from "@/assets/videos/2.asset.json";
 import v3 from "@/assets/videos/3.asset.json";
 import v4 from "@/assets/videos/4.asset.json";
 import v5 from "@/assets/videos/5.asset.json";
+import pAline from "@/assets/personagens/aline-tecnica.png.asset.json";
+import pAugusto from "@/assets/personagens/augusto-misterio.jpeg.asset.json";
+import pBianca from "@/assets/personagens/bianca-close.png.asset.json";
+import pBruno from "@/assets/personagens/bruno-resenha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,14 +28,14 @@ export const Route = createFileRoute("/")({
 const CAST = [
   { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v1.url },
   { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v2.url },
-  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v3.url },
+  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v3.url, photo: pAline.url },
   { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v4.url },
-  { n: "05", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct.", video: v5.url },
+  { n: "05", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct.", video: v5.url, photo: pBianca.url },
   { n: "06", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
   { n: "07", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
   { n: "08", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
-  { n: "09", role: "The Enigma", name: "Augusto Mistério", bio: "Suspense e desejo em cada corte." },
-  { n: "10", role: "The Host", name: "Bruno Resenha", bio: "Recebe o público como quem abre a própria casa." },
+  { n: "09", role: "The Enigma", name: "Augusto Mistério", bio: "Suspense e desejo em cada corte.", photo: pAugusto.url },
+  { n: "10", role: "The Host", name: "Bruno Resenha", bio: "Recebe o público como quem abre a própria casa.", photo: pBruno.url },
   { n: "11", role: "The Visionary", name: "Caio Evolução", bio: "Mostra o imóvel como o próximo passo da sua vida." },
   { n: "12", role: "The Voice", name: "Camila Áudio", bio: "Locução envolvente que segura até o último segundo." },
   { n: "13", role: "The Architect", name: "Henrique Espaço", bio: "Lê planta, volume e luz como ninguém." },
@@ -247,10 +251,14 @@ function HomePage() {
             <div className="eyebrow">O elenco</div>
             <h2>22 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
           </div>
-          <div className="cast-scroll reveal">
+          <div className="cast-grid reveal">
             {CAST.map((c) => (
               <div className="cast-card" key={c.n}>
-                {c.video && <video className="cast-video" src={c.video} autoPlay muted loop playsInline />}
+                {c.video ? (
+                  <video className="cast-video" src={c.video} autoPlay muted loop playsInline />
+                ) : c.photo ? (
+                  <img className="cast-video" src={c.photo} alt={c.name} loading="lazy" />
+                ) : null}
                 <div className="cast-scrim" />
                 <div className="cast-inner">
                   <div className="cast-top-row"><div className="cast-index2">Nº {c.n}</div><div className="cast-role2">{c.role}</div></div>
@@ -554,10 +562,9 @@ nav.links a:hover{color:var(--ink);}
 .cost-card.new .cost-row span:last-child{color:var(--gold-2);}
 @media (max-width:860px){.cost-cards{grid-template-columns:1fr;}}
 
-.cast-scroll{display:flex; gap:20px; overflow-x:auto; padding-bottom:16px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;}
-.cast-scroll::-webkit-scrollbar{height:6px;}
-.cast-scroll::-webkit-scrollbar-thumb{background:var(--line); border-radius:10px;}
-.cast-card{scroll-snap-align:start; flex:0 0 220px; border-radius:22px; overflow:hidden; position:relative; height:340px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
+.cast-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px;}
+@media (max-width:640px){.cast-grid{grid-template-columns:repeat(2,1fr); gap:12px;}}
+.cast-card{border-radius:22px; overflow:hidden; position:relative; height:340px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
 .cast-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
 .cast-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.65) 100%);}
 .cast-card:hover{transform:translateY(-8px);}
