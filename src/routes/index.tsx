@@ -562,10 +562,9 @@ nav.links a:hover{color:var(--ink);}
 .cost-card.new .cost-row span:last-child{color:var(--gold-2);}
 @media (max-width:860px){.cost-cards{grid-template-columns:1fr;}}
 
-.cast-scroll{display:flex; gap:20px; overflow-x:auto; padding-bottom:16px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;}
-.cast-scroll::-webkit-scrollbar{height:6px;}
-.cast-scroll::-webkit-scrollbar-thumb{background:var(--line); border-radius:10px;}
-.cast-card{scroll-snap-align:start; flex:0 0 220px; border-radius:22px; overflow:hidden; position:relative; height:340px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
+.cast-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px;}
+@media (max-width:640px){.cast-grid{grid-template-columns:repeat(2,1fr); gap:12px;}}
+.cast-card{border-radius:22px; overflow:hidden; position:relative; height:340px; background:linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 55%, var(--gold) 130%); transition:transform .3s;}
 .cast-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
 .cast-scrim{position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.65) 100%);}
 .cast-card:hover{transform:translateY(-8px);}
