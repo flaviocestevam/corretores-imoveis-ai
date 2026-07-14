@@ -180,3 +180,7 @@ html {
   background: var(--gold);
   color: var(--primary-foreground);
 }
+
+#lovable-badge {
+  display: none !important;
+}
