@@ -13,29 +13,43 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Corretor IA Studio — Influenciadores de IA que viralizam seus imóveis" },
-      { name: "description", content: "23 corretores de IA prontos para transformar suas fotos em Reels e TikToks virais. Sem câmera, sem estúdio, entrega em dias." },
+      { name: "description", content: "22 corretores de IA prontos para transformar suas fotos em Reels e TikToks virais. Sem câmera, sem estúdio, entrega em dias." },
       { property: "og:title", content: "Corretor IA Studio — Influenciadores de IA que viralizam seus imóveis" },
-      { property: "og:description", content: "Reels virais para imóveis de alto padrão. 23 personagens de IA prontos. Entrega em 48h." },
+      { property: "og:description", content: "Reels virais para imóveis de alto padrão. 22 personagens de IA prontos. Entrega em 48h." },
     ],
   }),
   component: HomePage,
 });
 
 const CAST = [
-  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v2.url },
-  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v3.url },
-  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v4.url },
-  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v5.url },
-  { n: "05", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
-  { n: "06", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
-  { n: "07", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
-  { n: "08", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct." },
+  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v1.url },
+  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v2.url },
+  { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v3.url },
+  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v4.url },
+  { n: "05", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct.", video: v5.url },
+  { n: "06", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
+  { n: "07", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
+  { n: "08", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
+  { n: "09", role: "The Enigma", name: "Augusto Mistério", bio: "Suspense e desejo em cada corte." },
+  { n: "10", role: "The Host", name: "Bruno Resenha", bio: "Recebe o público como quem abre a própria casa." },
+  { n: "11", role: "The Visionary", name: "Caio Evolução", bio: "Mostra o imóvel como o próximo passo da sua vida." },
+  { n: "12", role: "The Voice", name: "Camila Áudio", bio: "Locução envolvente que segura até o último segundo." },
+  { n: "13", role: "The Architect", name: "Henrique Espaço", bio: "Lê planta, volume e luz como ninguém." },
+  { n: "14", role: "The Champion", name: "João Vitória", bio: "Energia de fechamento e vibração de conquista." },
+  { n: "15", role: "The Spark", name: "Luna Energia", bio: "Ritmo alto, corte rápido, alcance viral." },
+  { n: "16", role: "The Straight-Shooter", name: "Marcos Verdade", bio: "Sem filtro, sem enrolação — só o que importa." },
+  { n: "17", role: "The Trendsetter", name: "Maya Urbano", bio: "Linguagem de rua, estética de capa de revista." },
+  { n: "18", role: "The Dramatist", name: "Otávio Novela", bio: "Cada ambiente vira cena de novela das nove." },
+  { n: "19", role: "The Broker", name: "Rafael Parcela", bio: "Traduz condição de pagamento em decisão fácil." },
+  { n: "20", role: "The Insider", name: "Renata Fofoca", bio: "Conta os bastidores que ninguém mais conta." },
+  { n: "21", role: "The Joy", name: "Solange Alegria", bio: "Bom humor que aproxima e engaja o feed." },
+  { n: "22", role: "The Editor", name: "Valentina Cortez", bio: "Curadoria afiada, estética de editorial de moda." },
 ];
 
 const MARQUEE = ["SC Sérgio Churrasco", "CR Clara Romance", "AT Aline Técnica", "BC Bianca Close", "ES Eduardo Sussurro", "YV Yasmin Valença", "PL Patrícia Luxo", "NB Nádia Blindada"];
 
 const FAQ = [
-  { q: "Os personagens são reais?", a: "Não. Os 23 corretores são personagens fictícios gerados por IA, com identidade visual e personalidade próprias. As fotos dos imóveis são sempre reais — as suas." },
+  { q: "Os personagens são reais?", a: "Não. Os 22 corretores são personagens fictícios gerados por IA, com identidade visual e personalidade próprias. As fotos dos imóveis são sempre reais — as suas." },
   { q: "Preciso aparecer no vídeo?", a: "Não. Essa é a proposta. Você envia as fotos, o estúdio entrega o vídeo pronto — sem câmera, sem estúdio, sem tempo perdido." },
   { q: "É só vídeo com personagem, ou dá pra fazer tour sem pessoa?", a: "As duas coisas. Além dos personagens virais, produzimos tour cinematográfico a partir da mesma foto, sem ninguém aparecendo — indicado quando o imóvel deve ser o único protagonista." },
   { q: "Quanto tempo demora a entrega?", a: "De 48 horas a 5 dias úteis, dependendo do plano. O plano Black tem prioridade máxima." },
@@ -114,7 +128,7 @@ function HomePage() {
           <div className="hero-grid">
             <div>
               <div className="badge-row">
-                <div className="pill"><span className="pulse" /> 23 influenciadores de IA prontos pra vender</div>
+                <div className="pill"><span className="pulse" /> 22 influenciadores de IA prontos pra vender</div>
               </div>
               <h1>Seus imóveis não precisam de <span className="grad-text">fotógrafo.</span><br />Precisam de <span className="grad-text">influenciador.</span></h1>
               <p className="hero-sub">A gente transforma as fotos que você já tem em Reels e TikToks virais estrelados por corretores de IA — ou em tours cinematográficos sem ninguém aparecendo. Sem câmera, sem estúdio, por uma fração do custo de uma produção tradicional.</p>
@@ -124,7 +138,7 @@ function HomePage() {
               </div>
               <div className="trust-row">
                 <div className="avatars"><div>SC</div><div>CR</div><div>YV</div><div>PL</div></div>
-                <div className="trust-text"><b>23 personagens</b> de IA já prontos para o seu imóvel</div>
+                <div className="trust-text"><b>22 personagens</b> de IA já prontos para o seu imóvel</div>
               </div>
             </div>
             <div className="phone-stage">
@@ -168,7 +182,7 @@ function HomePage() {
             <div className="pillar">
               <div className="icon">🎭</div>
               <h3>Influenciadores de IA</h3>
-              <p>23 personagens com personalidade, sotaque e bordão próprios, inseridos de forma realista nas fotos reais do imóvel. O público assiste até o fim porque quer saber o que o personagem vai dizer — não porque precisa saber o preço do m².</p>
+              <p>22 personagens com personalidade, sotaque e bordão próprios, inseridos de forma realista nas fotos reais do imóvel. O público assiste até o fim porque quer saber o que o personagem vai dizer — não porque precisa saber o preço do m².</p>
               <div className="no">Não é avatar genérico lendo um texto decorado.</div>
             </div>
             <div className="pillar">
@@ -193,7 +207,7 @@ function HomePage() {
             <div className="stat-grid">
               <div><div className="stat-num grad-text">403%</div><div className="stat-label">mais chances de um imóvel ser consultado quando é apresentado em vídeo, contra apenas fotos.</div></div>
               <div><div className="stat-num grad-text">48h</div><div className="stat-label">é o prazo mais rápido de entrega — sem esperar semanas de uma produtora tradicional.</div></div>
-              <div><div className="stat-num grad-text">23</div><div className="stat-label">personagens de IA prontos, sem precisar treinar ninguém ou contratar um influenciador real.</div></div>
+              <div><div className="stat-num grad-text">22</div><div className="stat-label">personagens de IA prontos, sem precisar treinar ninguém ou contratar um influenciador real.</div></div>
             </div>
             <div className="stat-source">Fonte: pesquisa de mercado citada por EncontraMoema sobre o comportamento do comprador de imóveis de alto padrão, 2026.</div>
           </div>
@@ -218,7 +232,7 @@ function HomePage() {
             <div className="cost-card new">
               <h4>Corretor IA Studio</h4>
               <div className="cost-row"><span>Captação</span><span>Fotos que você já tem</span></div>
-              <div className="cost-row"><span>Elenco</span><span>23 personagens prontos, sem gravação</span></div>
+              <div className="cost-row"><span>Elenco</span><span>22 personagens prontos, sem gravação</span></div>
               <div className="cost-row"><span>Edição</span><span>Incluída no plano, entregue junto</span></div>
               <div className="cost-row"><span>Escala</span><span>20 a 150 vídeos/mês no mesmo plano fixo</span></div>
               <div className="cost-row"><span>Prazo</span><span>48h a 5 dias úteis</span></div>
@@ -231,7 +245,7 @@ function HomePage() {
         <div className="wrap">
           <div className="section-head reveal">
             <div className="eyebrow">O elenco</div>
-            <h2>23 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
+            <h2>22 influenciadores de IA. <span className="grad-text">Cada imóvel</span> encontra o seu.</h2>
           </div>
           <div className="cast-scroll reveal">
             {CAST.map((c) => (
@@ -275,7 +289,7 @@ function HomePage() {
               <div className="plan-price">R$ 1.497<span>/mês</span></div>
               <div className="plan-desc">20 vídeos por mês</div>
               <ul>
-                <li>Escolha entre 23 corretores de IA</li>
+                <li>Escolha entre 22 corretores de IA</li>
                 <li>Formato vertical 9:16 nativo</li>
                 <li>Roteiro personalizado por imóvel</li>
                 <li>Entrega em até 5 dias úteis</li>
