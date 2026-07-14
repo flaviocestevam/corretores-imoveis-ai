@@ -8,6 +8,10 @@ import v2 from "@/assets/videos/2.asset.json";
 import v3 from "@/assets/videos/3.asset.json";
 import v4 from "@/assets/videos/4.asset.json";
 import v5 from "@/assets/videos/5.asset.json";
+import pAline from "@/assets/personagens/aline-tecnica.png.asset.json";
+import pAugusto from "@/assets/personagens/augusto-misterio.jpeg.asset.json";
+import pBianca from "@/assets/personagens/bianca-close.png.asset.json";
+import pBruno from "@/assets/personagens/bruno-resenha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
