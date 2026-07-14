@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import alineFoto from "@/assets/personagens/aline-tecnica.png.asset.json";
+import biancaFoto from "@/assets/personagens/bianca-close.png.asset.json";
+import augustoFoto from "@/assets/personagens/augusto-misterio.jpeg.asset.json";
+import brunoFoto from "@/assets/personagens/bruno-resenha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -10,11 +14,13 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-const personagens = [
+const personagens: { nome: string; tag: string; bio: string; foto?: string }[] = [
   { nome: "Sérgio Churrasco", tag: "The Closer", bio: "O amigo que fecha o negócio no domingo à tarde." },
   { nome: "Clara Romance", tag: "The Storyteller", bio: "Vende o sonho da casa para começar a história." },
-  { nome: "Aline Técnica", tag: "The Advisor", bio: "Planta, IPTU e ROI sem enrolação." },
-  { nome: "Bianca Close", tag: "The Negotiator", bio: "Fecha antes da concorrência responder o direct." },
+  { nome: "Aline Técnica", tag: "The Advisor", bio: "Planta, IPTU e ROI sem enrolação.", foto: alineFoto.url },
+  { nome: "Bianca Close", tag: "The Negotiator", bio: "Fecha antes da concorrência responder o direct.", foto: biancaFoto.url },
+  { nome: "Augusto Mistério", tag: "The Enigma", bio: "Silêncio elegante, presença que fecha antes da palavra.", foto: augustoFoto.url },
+  { nome: "Bruno Resenha", tag: "The Host", bio: "Tour descontraído com vista pro mar e papo reto.", foto: brunoFoto.url },
   { nome: "Eduardo Sussurro", tag: "The Curator", bio: "Tour íntimo, tom baixo, alto padrão." },
   { nome: "Yasmin Valença", tag: "The Ambassador", bio: "Frontal beach, brisa e sofisticação." },
   { nome: "Patrícia Luxo", tag: "The Executive", bio: "Coberturas, jóias e closets do tamanho de um apê." },
@@ -261,12 +267,21 @@ function Solucao() {
               className="reveal group relative aspect-[9/16] overflow-hidden border border-black/[0.06] bg-[oklch(0.96_0.005_85)] transition-all duration-700 hover:-translate-y-2 hover:border-gold/30"
               style={{ animationDelay: `${i * 60}ms` }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-7xl text-gold/20 transition-colors duration-700 group-hover:text-gold/40">
-                  {p.nome.split(" ").map((n) => n[0]).join("")}
-                </span>
-              </div>
-              <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-transparent to-transparent" />
+              {p.foto ? (
+                <img
+                  src={p.foto}
+                  alt={p.nome}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-serif text-7xl text-gold/20 transition-colors duration-700 group-hover:text-gold/40">
+                    {p.nome.split(" ").map((n) => n[0]).join("")}
+                  </span>
+                </div>
+              )}
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/20 to-transparent" />
               <div className="absolute inset-0 bg-bordeaux/5 opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
               <span className="absolute right-4 top-4 z-20 font-serif text-[10px] uppercase tracking-widest text-foreground/40">
                 {String(i + 1).padStart(2, "0")} / 23
