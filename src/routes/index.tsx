@@ -12,6 +12,24 @@ import pAline from "@/assets/personagens/aline-tecnica.png.asset.json";
 import pAugusto from "@/assets/personagens/augusto-misterio.jpeg.asset.json";
 import pBianca from "@/assets/personagens/bianca-close.png.asset.json";
 import pBruno from "@/assets/personagens/bruno-resenha.png.asset.json";
+import pCaio from "@/assets/personagens/caio-evolucao.png.asset.json";
+import pCamila from "@/assets/personagens/camila-audio.png.asset.json";
+import pClara from "@/assets/personagens/clara-romance.png.asset.json";
+import pEduardo from "@/assets/personagens/eduardo-sussurro.png.asset.json";
+import pHenrique from "@/assets/personagens/henrique-espaco.png.asset.json";
+import pJoao from "@/assets/personagens/joao-vitoria.png.asset.json";
+import pLuna from "@/assets/personagens/luna-energia.png.asset.json";
+import pMarcos from "@/assets/personagens/marcos-verdade.png.asset.json";
+import pMaya from "@/assets/personagens/maya-urbano.png.asset.json";
+import pNadia from "@/assets/personagens/nadia-blindada.png.asset.json";
+import pOtavio from "@/assets/personagens/otavio-novela.png.asset.json";
+import pPatricia from "@/assets/personagens/patricia-luxo.png.asset.json";
+import pRafael from "@/assets/personagens/rafael-parcela.png.asset.json";
+import pRenata from "@/assets/personagens/renata-fofoca.png.asset.json";
+import pSergio from "@/assets/personagens/sergio-churrasco.png.asset.json";
+import pSolange from "@/assets/personagens/solange-alegria.png.asset.json";
+import pValentina from "@/assets/personagens/valentina-cortez.png.asset.json";
+import pYasmin from "@/assets/personagens/yasmin-valenca.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,28 +44,28 @@ export const Route = createFileRoute("/")({
 });
 
 const CAST = [
-  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v1.url },
-  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v2.url },
+  { n: "01", role: "The Closer", name: "Sérgio Churrasco", bio: "O amigo que fecha negócio num domingo de família.", video: v1.url, photo: pSergio.url },
+  { n: "02", role: "The Storyteller", name: "Clara Romance", bio: "Vende o começo de uma história, não uma planta.", video: v2.url, photo: pClara.url },
   { n: "03", role: "The Advisor", name: "Aline Técnica", bio: "ROI, planta e detalhe técnico sem enrolação.", video: v3.url, photo: pAline.url },
-  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v4.url },
+  { n: "04", role: "The Curator", name: "Eduardo Sussurro", bio: "Tour íntimo, tom baixo, informação exclusiva.", video: v4.url, photo: pEduardo.url },
   { n: "05", role: "The Negotiator", name: "Bianca Close", bio: "Fecha antes do concorrente responder o direct.", video: v5.url, photo: pBianca.url },
-  { n: "06", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela." },
-  { n: "07", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente." },
-  { n: "08", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo." },
+  { n: "06", role: "The Executive", name: "Patrícia Luxo", bio: "Cobertura, closet e presença de passarela.", photo: pPatricia.url },
+  { n: "07", role: "The Specialist", name: "Nádia Blindada", bio: "Segurança, discrição e decisão inteligente.", photo: pNadia.url },
+  { n: "08", role: "The Ambassador", name: "Yasmin Valença", bio: "Frontal beach, elegância e magnetismo.", photo: pYasmin.url },
   { n: "09", role: "The Enigma", name: "Augusto Mistério", bio: "Suspense e desejo em cada corte.", photo: pAugusto.url },
   { n: "10", role: "The Host", name: "Bruno Resenha", bio: "Recebe o público como quem abre a própria casa.", photo: pBruno.url },
-  { n: "11", role: "The Visionary", name: "Caio Evolução", bio: "Mostra o imóvel como o próximo passo da sua vida." },
-  { n: "12", role: "The Voice", name: "Camila Áudio", bio: "Locução envolvente que segura até o último segundo." },
-  { n: "13", role: "The Architect", name: "Henrique Espaço", bio: "Lê planta, volume e luz como ninguém." },
-  { n: "14", role: "The Champion", name: "João Vitória", bio: "Energia de fechamento e vibração de conquista." },
-  { n: "15", role: "The Spark", name: "Luna Energia", bio: "Ritmo alto, corte rápido, alcance viral." },
-  { n: "16", role: "The Straight-Shooter", name: "Marcos Verdade", bio: "Sem filtro, sem enrolação — só o que importa." },
-  { n: "17", role: "The Trendsetter", name: "Maya Urbano", bio: "Linguagem de rua, estética de capa de revista." },
-  { n: "18", role: "The Dramatist", name: "Otávio Novela", bio: "Cada ambiente vira cena de novela das nove." },
-  { n: "19", role: "The Broker", name: "Rafael Parcela", bio: "Traduz condição de pagamento em decisão fácil." },
-  { n: "20", role: "The Insider", name: "Renata Fofoca", bio: "Conta os bastidores que ninguém mais conta." },
-  { n: "21", role: "The Joy", name: "Solange Alegria", bio: "Bom humor que aproxima e engaja o feed." },
-  { n: "22", role: "The Editor", name: "Valentina Cortez", bio: "Curadoria afiada, estética de editorial de moda." },
+  { n: "11", role: "The Visionary", name: "Caio Evolução", bio: "Mostra o imóvel como o próximo passo da sua vida.", photo: pCaio.url },
+  { n: "12", role: "The Voice", name: "Camila Áudio", bio: "Locução envolvente que segura até o último segundo.", photo: pCamila.url },
+  { n: "13", role: "The Architect", name: "Henrique Espaço", bio: "Lê planta, volume e luz como ninguém.", photo: pHenrique.url },
+  { n: "14", role: "The Champion", name: "João Vitória", bio: "Energia de fechamento e vibração de conquista.", photo: pJoao.url },
+  { n: "15", role: "The Spark", name: "Luna Energia", bio: "Ritmo alto, corte rápido, alcance viral.", photo: pLuna.url },
+  { n: "16", role: "The Straight-Shooter", name: "Marcos Verdade", bio: "Sem filtro, sem enrolação — só o que importa.", photo: pMarcos.url },
+  { n: "17", role: "The Trendsetter", name: "Maya Urbano", bio: "Linguagem de rua, estética de capa de revista.", photo: pMaya.url },
+  { n: "18", role: "The Dramatist", name: "Otávio Novela", bio: "Cada ambiente vira cena de novela das nove.", photo: pOtavio.url },
+  { n: "19", role: "The Broker", name: "Rafael Parcela", bio: "Traduz condição de pagamento em decisão fácil.", photo: pRafael.url },
+  { n: "20", role: "The Insider", name: "Renata Fofoca", bio: "Conta os bastidores que ninguém mais conta.", photo: pRenata.url },
+  { n: "21", role: "The Joy", name: "Solange Alegria", bio: "Bom humor que aproxima e engaja o feed.", photo: pSolange.url },
+  { n: "22", role: "The Editor", name: "Valentina Cortez", bio: "Curadoria afiada, estética de editorial de moda.", photo: pValentina.url },
 ];
 
 const MARQUEE = ["SC Sérgio Churrasco", "CR Clara Romance", "AT Aline Técnica", "BC Bianca Close", "ES Eduardo Sussurro", "YV Yasmin Valença", "PL Patrícia Luxo", "NB Nádia Blindada"];
